@@ -60,13 +60,9 @@ def convert_population_to_binary(variables):
 
 
 def merge_binary_values(variables):
-    # Oblicz maksymalną długość, aby wiedzieć, ile wartości musimy połączyć
     max_length = max(len(variable["binary_values"]) for variable in variables)
-
-    # Zainicjalizuj listę z pustymi stringami o długości max_length
     merged_binary_values = [''] * max_length
 
-    # Iteruj po każdym słowniku
     for variable in variables:
         binary_values = variable["binary_values"]
 
